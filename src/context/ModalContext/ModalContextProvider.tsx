@@ -3,11 +3,11 @@ import { ModalContext } from "./Modal";
 import { FC } from "react";
 import { Modal } from "../../Components";
 
-export const ModalProvider: FC = ({children}) => {
+export const ModalProvider: FC = ({ children }) => {
     const [modalOpened, setModalOpened] = useState(false);
-    const [modalContent, setModalContent] = useState();
-    
-    const openModal= (modalConfig: React.SetStateAction<undefined>) => {
+    const [modalContent, setModalContent] = useState({ children, title: '' });
+
+    const openModal = (modalConfig: React.SetStateAction<any>) => {
         setModalContent(modalConfig);
 
         setModalOpened(true);
@@ -19,15 +19,15 @@ export const ModalProvider: FC = ({children}) => {
 
 
 
-    const valuseModalProvider = {
+    const valueModalProvider = {
         openModal,
         closeModal
     }
 
     return (
-        <ModalContext.Provider value={valuseModalProvider}>
-            { modalOpened && <Modal {...modalContent} />}
-            {children}
+        <ModalContext.Provider value={valueModalProvider}>
+            { modalOpened && <Modal { ...modalContent } />}
+            { children }
         </ModalContext.Provider>
     )
 }

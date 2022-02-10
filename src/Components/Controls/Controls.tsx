@@ -1,4 +1,3 @@
-import React, { Children } from "react";
 import "./style.css";
 import { useContext } from "react";
 import { ModalContext } from "../../context";
@@ -17,7 +16,7 @@ export const Controls = () => {
     const handleClickSecondButtom = () => {
         openModal({
             title: 'Вторая кнопка',
-            children: <h1>SECOND MODLE</h1>
+            children: <h1>SECOND MODAL</h1>
         });
     }
 
@@ -25,7 +24,7 @@ export const Controls = () => {
     const handleClickThridButtom = () => {
         openModal({
             title: 'Третья кнопка',
-            children: <div><button onClick= {closeModal}>Close Modul</button></div>
+            children: <div><button onClick= {closeModal}>Close Modal</button></div>
         });
     }
 
