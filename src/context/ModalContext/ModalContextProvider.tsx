@@ -5,9 +5,9 @@ import { Modal } from "../../Components";
 
 export const ModalProvider: FC = ({children}) => {
     const [modalOpened, setModalOpened] = useState(false);
-    const [modalContent, setModalContent] = useState(undefined);
+    const [modalContent, setModalContent] = useState();
     
-    const openModal= (modalConfig) => {
+    const openModal= (modalConfig: React.SetStateAction<undefined>) => {
         setModalContent(modalConfig);
 
         setModalOpened(true);
