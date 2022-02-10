@@ -3,7 +3,7 @@ import { createContext } from 'react';
 
 export const ModalContext = createContext({
 
-    openModal: (title) => {},
+    openModal: (title: any) => {},
     closeModal: () => {}
 
 })

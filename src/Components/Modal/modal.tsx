@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { ModalContext } from "../../context";
 import "./style.css";
 
-export const Modal = (props) => {
+export const Modal = (props: { children: any; title: any; }) => {
     const {children, title} = props;
     const { closeModal } = useContext(ModalContext);
 

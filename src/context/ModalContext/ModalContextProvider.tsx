@@ -5,7 +5,7 @@ import { Modal } from "../../Components";
 
 export const ModalProvider: FC = ({children}) => {
     const [modalOpened, setModalOpened] = useState(false);
-    const [modalContent, setModalContent] = useState(null);
+    const [modalContent, setModalContent] = useState(undefined);
     
     const openModal= (modalConfig) => {
         setModalContent(modalConfig);
